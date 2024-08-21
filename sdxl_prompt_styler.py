@@ -243,6 +243,8 @@ def read_sdxl_templates_replace_and_combine_advanced(json_data, template_name, p
 class SDXLPromptStyler:
 
     def __init__(self):
+        current_directory = os.path.dirname(os.path.realpath(__file__))
+        self.json_data, styles = load_styles_from_directory(current_directory)
         pass
 
     @classmethod
